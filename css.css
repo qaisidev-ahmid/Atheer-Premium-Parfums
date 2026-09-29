@@ -11,7 +11,7 @@
 
 /* تعليق: الحل النهائي الجذري - توحيد لون الخلفية للموقع كاملاً بلون واحد صافٍ وعميق (العنابي المحروق الفخم من صورتك) لإلغاء أي فواصل أو خطوط سوداء */
 body {
-    background-color: #160a10; 
+    background-color: #160a10;
     color: #e2e8f0;
     min-height: 100vh;
 }
@@ -31,8 +31,8 @@ header {
     align-items: center;
     padding: 25px 8%;
     /* تعليق: جعل خلفية الهيدر شفافة تماماً ليمتص لون الخلفية الموحد ويمتزج معه بالمسطرة */
-    background: transparent; 
-    border-bottom: none; 
+    background: transparent;
+    border-bottom: none;
     position: fixed;
     width: 100%;
     top: 0;
@@ -47,7 +47,8 @@ header .logo {
 }
 
 header .logo span {
-    color: #FFA586; /* ومضة الشعار باللون المشمشي الناعم */
+    color: #FFA586;
+    /* ومضة الشعار باللون المشمشي الناعم */
     text-shadow: 0 0 10px rgba(255, 165, 134, 0.5);
 }
 
@@ -61,14 +62,16 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #a0aec0; /* لون بلاتيني هادئ ومقروء للنصوص */
+    color: #a0aec0;
+    /* لون بلاتيني هادئ ومقروء للنصوص */
     text-decoration: none;
     font-size: 15px;
     font-weight: 700;
     transition: 0.3s ease;
 }
 
-header nav ul li a:hover, header nav ul li a.active {
+header nav ul li a:hover,
+header nav ul li a.active {
     color: #B51A2B;
     text-shadow: 0 0 8px rgba(181, 26, 43, 0.5);
 }
@@ -84,7 +87,7 @@ header nav ul li a:hover, header nav ul li a.active {
     padding: 0 10%;
     position: relative;
     /* تعليق: تم إلغاء التدرج الدائري القديم وجعل الخلفية شفافة لضمان عدم ظهور الكتل السوداء المزعجة */
-    background: transparent; 
+    background: transparent;
 }
 
 .hero-content {
@@ -176,7 +179,7 @@ header nav ul li a:hover, header nav ul li a.active {
     padding: 60px 8% 120px 8%;
     position: relative;
     /* تعليق: جعل خلفية القسم شفافة ليلتحم كلياً ويمتص نفس لون الـ body الموحد */
-    background-color: transparent; 
+    background-color: transparent;
 }
 
 .section-title {
@@ -205,8 +208,8 @@ header nav ul li a:hover, header nav ul li a.active {
 /* كارت المنتج التفاعلي المصمم بخلفية زجاجية بالغة النعومة والانسيابية وبدون أي فواصل */
 .parfum-card {
     /* تعليق: استخدام تفتيح زجاجي شفاف جداً وخفيف ليتناغم كلياً مع الخلفية الموحدة */
-    background: rgba(255, 255, 255, 0.02); 
-    border: none; 
+    background: rgba(255, 255, 255, 0.02);
+    border: none;
     padding: 50px 40px;
     border-radius: 24px;
     width: 100%;
@@ -283,7 +286,8 @@ header nav ul li a:hover, header nav ul li a.active {
 
 .parfum-card:hover {
     transform: translateY(-12px);
-    background: rgba(255, 255, 255, 0.05); /* زيادة طفيفة في لمعان الزجاج عند التفاعل بمرونة */
+    background: rgba(255, 255, 255, 0.05);
+    /* زيادة طفيفة في لمعان الزجاج عند التفاعل بمرونة */
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
@@ -291,11 +295,13 @@ header nav ul li a:hover, header nav ul li a.active {
     box-shadow: 0 15px 35px #FFA586;
     letter-spacing: 1px;
 }
+
 /* تعليق: إصلاح انحراف زر الهاتف وإجباره على التمركز والانكماش بالسنتر بالملي */
 .btn-buy {
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box; /* توحيد الحسابات لمنع الهروب جهة الشمال */
+    box-sizing: border-box;
+    /* توحيد الحسابات لمنع الهروب جهة الشمال */
     background: linear-gradient(135deg, #FFA586, #B51A2B);
     color: #160a10;
     border: none;
