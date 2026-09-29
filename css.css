@@ -291,3 +291,19 @@ header nav ul li a:hover, header nav ul li a.active {
     box-shadow: 0 15px 35px #FFA586;
     letter-spacing: 1px;
 }
+/* تعليق: إصلاح انحراف زر الهاتف وإجباره على التمركز والانكماش بالسنتر بالملي */
+.btn-buy {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* توحيد الحسابات لمنع الهروب جهة الشمال */
+    background: linear-gradient(135deg, #FFA586, #B51A2B);
+    color: #160a10;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 165, 134, 0.25);
+    transition: all 0.3s ease;
+}
