@@ -1,0 +1,293 @@
+/* تعليق: استيراد خط القاهرة الفخم والحديث بجميع أوزانه لتنسيق النصوص العربية بهيبة رقمية */
+@import url('https://googleapis.com');
+
+/* تعليق: تصفير الهوامش وتوحيد طريقة حساب القياسات لضمان دقة المساحات البصرية للبراند */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* تعليق: الحل النهائي الجذري - توحيد لون الخلفية للموقع كاملاً بلون واحد صافٍ وعميق (العنابي المحروق الفخم من صورتك) لإلغاء أي فواصل أو خطوط سوداء */
+body {
+    background-color: #160a10; 
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+/* تعليق: ومضة وتوهج عناوين الـ span بالأحمر القرمزي المضيء والحاد */
+span {
+    color: #B51A2B;
+    text-shadow: 0 0 15px rgba(181, 26, 43, 0.6);
+}
+
+/* ------------------------------------------------------------- */
+/* 2. شريط التنقل العلوي المدمج الشفاف بالكامل (Borderless Navigation Bar) */
+/* ------------------------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    /* تعليق: جعل خلفية الهيدر شفافة تماماً ليمتص لون الخلفية الموحد ويمتزج معه بالمسطرة */
+    background: transparent; 
+    border-bottom: none; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+header .logo span {
+    color: #FFA586; /* ومضة الشعار باللون المشمشي الناعم */
+    text-shadow: 0 0 10px rgba(255, 165, 134, 0.5);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    color: #a0aec0; /* لون بلاتيني هادئ ومقروء للنصوص */
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+header nav ul li a:hover, header nav ul li a.active {
+    color: #B51A2B;
+    text-shadow: 0 0 8px rgba(181, 26, 43, 0.5);
+}
+
+/* ------------------------------------------------------------- */
+/* 3. الواجهة الرئيسية السينمائية (Hero Section) */
+/* ------------------------------------------------------------- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    position: relative;
+    /* تعليق: تم إلغاء التدرج الدائري القديم وجعل الخلفية شفافة لضمان عدم ظهور الكتل السوداء المزعجة */
+    background: transparent; 
+}
+
+.hero-content {
+    max-width: 850px;
+    text-align: center;
+    z-index: 5;
+}
+
+.hero-content h1 {
+    font-size: 58px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 19px;
+    color: #e2e8f0;
+    opacity: 0.8;
+    line-height: 1.9;
+    margin-bottom: 45px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* تعليق: زر النيون الرئيسي باللون الأحمر القرمزي المتفجر */
+.btn-amber {
+    background: #B51A2B;
+    color: #ffffff;
+    border: none;
+    padding: 16px 42px;
+    font-size: 17px;
+    font-weight: 900;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(181, 26, 43, 0.4);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-amber:hover {
+    box-shadow: 0 0 40px #B51A2B;
+    transform: translateY(-4px);
+}
+
+/* زر الأوتلاين باللون المشمشي الخوخي المضيء ليعطي تباين مذهل */
+.btn-outline-crimson {
+    background: transparent;
+    color: #FFA586;
+    border: 2px solid #FFA586;
+    padding: 16px 42px;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.btn-outline-crimson:hover {
+    background: #FFA586;
+    color: #160a10;
+    box-shadow: 0 0 20px rgba(255, 165, 134, 0.5);
+    transform: translateY(-4px);
+}
+
+/* تأثير الغيمة الضوئية الفاخرة المشمشية المتوهجة بمركز الخلفية */
+.luxury-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 450px;
+    background: #FFA586;
+    filter: blur(170px);
+    opacity: 0.12;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ------------------------------------------------------------- */
+/* 4. قسم استعراض زجاجة العطر الفاخرة المدمج بالكامل (Integrated Showcase) */
+/* ------------------------------------------------------------- */
+.collection-section {
+    padding: 60px 8% 120px 8%;
+    position: relative;
+    /* تعليق: جعل خلفية القسم شفافة ليلتحم كلياً ويمتص نفس لون الـ body الموحد */
+    background-color: transparent; 
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: 16px;
+    color: #a0aec0;
+}
+
+.product-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* كارت المنتج التفاعلي المصمم بخلفية زجاجية بالغة النعومة والانسيابية وبدون أي فواصل */
+.parfum-card {
+    /* تعليق: استخدام تفتيح زجاجي شفاف جداً وخفيف ليتناغم كلياً مع الخلفية الموحدة */
+    background: rgba(255, 255, 255, 0.02); 
+    border: none; 
+    padding: 50px 40px;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.parfum-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #B51A2B;
+    color: #ffffff;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 900;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(181, 26, 43, 0.3);
+}
+
+.parfum-icon {
+    font-size: 64px;
+    margin-bottom: 25px;
+    filter: drop-shadow(0 0 15px rgba(255, 165, 134, 0.3));
+}
+
+.parfum-card h3 {
+    font-size: 26px;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.parfum-card p {
+    color: #e2e8f0;
+    opacity: 0.7;
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.parfum-price {
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.parfum-price span {
+    font-size: 15px;
+    color: #FFA586;
+    text-shadow: none;
+}
+
+/* زر المشتريات المطور بالتدرج المشمشي والوردي المتوهج لكسر الألوان الداكنة */
+.btn-buy {
+    width: 100%;
+    background: linear-gradient(135deg, #FFA586, #B51A2B);
+    color: #160a10;
+    border: none;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: 900;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(255, 165, 134, 0.25);
+    transition: all 0.3s ease;
+}
+
+.parfum-card:hover {
+    transform: translateY(-12px);
+    background: rgba(255, 255, 255, 0.05); /* زيادة طفيفة في لمعان الزجاج عند التفاعل بمرونة */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.btn-buy:hover {
+    box-shadow: 0 15px 35px #FFA586;
+    letter-spacing: 1px;
+}
