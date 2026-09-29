@@ -207,18 +207,22 @@ header nav ul li a.active {
 
 /* كارت المنتج التفاعلي المصمم بخلفية زجاجية بالغة النعومة والانسيابية وبدون أي فواصل */
 .parfum-card {
-    /* تعليق: استخدام تفتيح زجاجي شفاف جداً وخفيف ليتناغم كلياً مع الخلفية الموحدة */
-    background: rgba(255, 255, 255, 0.02);
-    border: none;
-    padding: 50px 40px;
+  /* تعليق: الكارت التفاعلي المطور - تم حقن التجاوب المطلق لمنع هروب الأزرار جهة الشمال */
+.parfum-card {
+    background: rgba(30, 30, 47, 0.35); 
+    border: none; 
+    padding: 40px 25px; /* تنعيم الحشو الداخلي ليناسب الهواتف الضيقة */
     border-radius: 24px;
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
+    box-sizing: border-box; /* إجبار الكارت على حساب مساحاته بالداخل بدون انفجار */
     text-align: center;
     position: relative;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
 }
 
 .parfum-badge {
