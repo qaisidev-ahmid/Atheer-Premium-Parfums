@@ -1,7 +1,7 @@
 /* تعليق: استيراد خط القاهرة العصري من سيرفرات جوجل لتنسيق الهوية العربية بالمسطرة */
 @import url('https://googleapis.com');
 
-/* تعليق: تصفير الهوامش وتوحيد طريقة حساب القياسات لجميع العناصر لمنع التداخل */
+/* تعليق: تصفير الهوامش وتوحيد طريقة حساب القياسات لجميع العناصر لمنع التداخل الجانبي */
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +9,15 @@
     font-family: 'Cairo', sans-serif;
 }
 
-/* تعليق: الخلفية العنابية الملوكية الموحدة لبراند Qaisi Dev لإلغاء أي فواصل لونية */
+/* تعليق: الخلفية العنابية الملوكية الموحدة لبراند Qaisi Dev لإلغاء الفواصل البصرية نهائياً */
 body {
     background-color: #160a10;
     color: #e2e8f0;
     min-height: 100vh;
     overflow-x: hidden;
     /* منع التمرير الأفقي البشع في الهواتف */
+    scroll-behavior: smooth;
+    /* تنعيم الحركة عند التنقل بين الأقسام */
 }
 
 /* إعدادات الروابط العامة */
@@ -31,7 +33,7 @@ span {
 }
 
 /* ------------------------------------------------------------- */
-/* 2. شريط التنقل الملوكي المتمركز بالسنتر (Centered Luxury Header) */
+/* 1. شريط التنقل الملوكي المتمركز بالسنتر (Centered Luxury Header) */
 /* ------------------------------------------------------------- */
 header {
     display: flex;
@@ -45,7 +47,6 @@ header {
     padding: 25px 8%;
     /* حشو جانبي متناسق لحماية الكلمات على الهاتف واللاب توب */
     background: transparent;
-    border-bottom: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -92,14 +93,14 @@ header nav ul li a.active {
 }
 
 /* ------------------------------------------------------------- */
-/* 3. الواجهة الرئيسية السينمائية (Hero Section) */
+/* 2. الواجهة الرئيسية السينمائية (Hero Section) */
 /* ------------------------------------------------------------- */
 .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 120px 8% 60px 8%;
     position: relative;
     background: transparent;
 }
@@ -111,7 +112,7 @@ header nav ul li a.active {
 }
 
 .hero-content h1 {
-    font-size: 58px;
+    font-size: 52px;
     font-weight: 900;
     color: #ffffff;
     line-height: 1.3;
@@ -119,7 +120,7 @@ header nav ul li a.active {
 }
 
 .hero-content p {
-    font-size: 19px;
+    font-size: 18px;
     color: #e2e8f0;
     opacity: 0.8;
     line-height: 1.9;
@@ -132,13 +133,12 @@ header nav ul li a.active {
     gap: 20px;
 }
 
-/* زر النيون الرئيسي باللون الأحمر القرمزي */
 .btn-amber {
     background: #B51A2B;
     color: #ffffff;
     border: none;
     padding: 16px 42px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 900;
     border-radius: 8px;
     cursor: pointer;
@@ -151,27 +151,25 @@ header nav ul li a.active {
     transform: translateY(-4px);
 }
 
-/* زر الأوتلاين باللون المشمشي الخوخي المضيء */
-.btn-outline-crimson {
+.btn-outline {
     background: transparent;
     color: #FFA586;
     border: 2px solid #FFA586;
     padding: 16px 42px;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s all ease;
 }
 
-.btn-outline-crimson:hover {
+.btn-outline:hover {
     background: #FFA586;
     color: #160a10;
     box-shadow: 0 0 20px rgba(255, 165, 134, 0.5);
     transform: translateY(-4px);
 }
 
-/* تأثير الغيمة الضوئية الفاخرة المشمشية المتوهجة في الخلفية */
 .luxury-glow {
     position: absolute;
     top: 50%;
@@ -187,21 +185,20 @@ header nav ul li a.active {
 }
 
 /* ------------------------------------------------------------- */
-/* 4. قسم استعراض زجاجة العطر المدمج التفاعلي (Integrated Showcase) */
+/* 3. قسم متجر الواتساب الفوري (Store Section) */
 /* ------------------------------------------------------------- */
 .collection-section {
-    padding: 80px 8% 120px 8%;
+    padding: 80px 8%;
     position: relative;
-    background-color: transparent;
 }
 
 .section-title {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .section-title h2 {
-    font-size: 38px;
+    font-size: 36px;
     font-weight: 900;
     color: #ffffff;
     margin-bottom: 15px;
@@ -216,14 +213,12 @@ header nav ul li a.active {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
-/* كارت المنتج التفاعلي المصمم بخلفية زجاجية بالغة التجاوب والانسيابية وبدون أي فواصل */
 .parfum-card {
     background: rgba(255, 255, 255, 0.02);
-    border: none;
     padding: 50px 30px;
-    /* حشو ناعم لتأمين تمركز العناصر داخل الهاتف */
     border-radius: 24px;
     width: 100%;
     max-width: 420px;
@@ -233,7 +228,7 @@ header nav ul li a.active {
     -webkit-backdrop-filter: blur(15px);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-sizing: border-box;
-    /* حماية الصندوق من الانفجار الجانبي */
+    /* حماية مطلقة لمنع الهروب جهة الشمال */
 }
 
 .parfum-badge {
@@ -247,20 +242,17 @@ header nav ul li a.active {
     font-size: 13px;
     font-weight: 900;
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(181, 26, 43, 0.3);
 }
 
 .parfum-icon {
     font-size: 64px;
     margin-bottom: 25px;
-    filter: drop-shadow(0 0 15px rgba(255, 165, 134, 0.3));
 }
 
 .parfum-card h3 {
     font-size: 26px;
     color: #ffffff;
     margin-bottom: 15px;
-    font-weight: 700;
 }
 
 .parfum-card p {
@@ -281,13 +273,17 @@ header nav ul li a.active {
 .parfum-price span {
     font-size: 15px;
     color: #FFA586;
-    text-shadow: none;
 }
 
-/* زر المشتريات المطور الملتزم بالتمركز المطلق لمنع الهروب جهة الشمال */
-.btn-buy {
+/* تنسيق وسم الرابط الحاضن لزر الشراء لمنع التمدد الخارجي العشوائي */
+.btn-buy-link {
+    display: block;
     width: 100%;
     max-width: 100%;
+}
+
+.btn-buy {
+    width: 100%;
     background: linear-gradient(135deg, #FFA586, #B51A2B);
     color: #160a10;
     border: none;
@@ -299,16 +295,106 @@ header nav ul li a.active {
     box-shadow: 0 10px 25px rgba(255, 165, 134, 0.25);
     transition: all 0.3s ease;
     box-sizing: border-box;
-    /* حماية مطلقة للحسابات الهاتفية */
 }
 
 .parfum-card:hover {
-    transform: translateY(-12px);
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.04);
 }
 
-.btn-buy:hover {
-    box-shadow: 0 15px 35px #FFA586;
-    letter-spacing: 1px;
+/* ------------------------------------------------------------- */
+/* 4. قسم نموذج الطلب المربوط بالإيميل (Contact Section) */
+/* ------------------------------------------------------------- */
+.contact-section {
+    padding: 80px 8% 120px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* هيكل الـ Form الزجاجي الفخم المتمركز في السنتر بالملي */
+.luxury-form {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 45px 35px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    /* تحديد عرض مثالي ملموم ومريح للعين للنموذج */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-sizing: border-box;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: right;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFA586;
+    /* تلوين العناوين باللون المشمشي المضيء */
+    margin-bottom: 10px;
+}
+
+/* هندسة حقول الإدخال والـ Textarea بكود نظيف ومريح للزائر */
+.luxury-form input,
+.luxury-form textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 16px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* تأثير التوهج النيوني الفخم عند ضغط الزبون بداخل حقل الإدخال */
+.luxury-form input:focus,
+.luxury-form textarea:focus {
+    border-color: #B51A2B;
+    box-shadow: 0 0 12px rgba(181, 26, 43, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.luxury-form button {
+    width: 100%;
+    /* تمدد الزر ليمتد بكامل عرض الفورم بنسق ملوكي */
+    margin-top: 10px;
+}
+
+/* ------------------------------------------------------------- */
+/* 5. شاشة هندسة التجاوب المطلق مع الهواتف الذكية (Media Queries) */
+/* ------------------------------------------------------------- */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    header nav {
+        display: none;
+        /* إخفاء قائمة الكمبيوتر التقليدية على شاشات الهاتف */
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .luxury-form {
+        padding: 30px 20px;
+    }
 }
