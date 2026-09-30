@@ -1,7 +1,7 @@
-/* تعليق: استيراد خط القاهرة الفخم والحديث بجميع أوزانه لتنسيق النصوص العربية بهيبة رقمية */
+/* تعليق: استيراد خط القاهرة العصري من سيرفرات جوجل لتنسيق الهوية العربية بالمسطرة */
 @import url('https://googleapis.com');
 
-/* تعليق: تصفير الهوامش وتوحيد طريقة حساب القياسات لضمان دقة المساحات البصرية للبراند */
+/* تعليق: تصفير الهوامش وتوحيد طريقة حساب القياسات لجميع العناصر لمنع التداخل */
 * {
     margin: 0;
     padding: 0;
@@ -9,11 +9,19 @@
     font-family: 'Cairo', sans-serif;
 }
 
-/* تعليق: الحل النهائي الجذري - توحيد لون الخلفية للموقع كاملاً بلون واحد صافٍ وعميق (العنابي المحروق الفخم من صورتك) لإلغاء أي فواصل أو خطوط سوداء */
+/* تعليق: الخلفية العنابية الملوكية الموحدة لبراند Qaisi Dev لإلغاء أي فواصل لونية */
 body {
     background-color: #160a10;
     color: #e2e8f0;
     min-height: 100vh;
+    overflow-x: hidden;
+    /* منع التمرير الأفقي البشع في الهواتف */
+}
+
+/* إعدادات الروابط العامة */
+a {
+    text-decoration: none;
+    color: #ffffff;
 }
 
 /* تعليق: ومضة وتوهج عناوين الـ span بالأحمر القرمزي المضيء والحاد */
@@ -23,20 +31,27 @@ span {
 }
 
 /* ------------------------------------------------------------- */
-/* 2. شريط التنقل العلوي المدمج الشفاف بالكامل (Borderless Navigation Bar) */
+/* 2. شريط التنقل الملوكي المتمركز بالسنتر (Centered Luxury Header) */
 /* ------------------------------------------------------------- */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    /* تحديد عرض أقصى متناسق لمنع الهروب في الشاشات الكبيرة */
+    margin: 0 auto;
+    /* معادلة التوسيط السحرية لقعود الهيدر في السنتر بالملي */
     padding: 25px 8%;
-    /* تعليق: جعل خلفية الهيدر شفافة تماماً ليمتص لون الخلفية الموحد ويمتزج معه بالمسطرة */
+    /* حشو جانبي متناسق لحماية الكلمات على الهاتف واللاب توب */
     background: transparent;
     border-bottom: none;
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 header .logo {
@@ -55,18 +70,18 @@ header .logo span {
 header nav ul {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 header nav ul li {
-    margin-left: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 header nav ul li a {
     color: #a0aec0;
-    /* لون بلاتيني هادئ ومقروء للنصوص */
-    text-decoration: none;
-    font-size: 15px;
     font-weight: 700;
+    font-size: 15px;
     transition: 0.3s ease;
 }
 
@@ -86,7 +101,6 @@ header nav ul li a.active {
     justify-content: center;
     padding: 0 10%;
     position: relative;
-    /* تعليق: تم إلغاء التدرج الدائري القديم وجعل الخلفية شفافة لضمان عدم ظهور الكتل السوداء المزعجة */
     background: transparent;
 }
 
@@ -118,7 +132,7 @@ header nav ul li a.active {
     gap: 20px;
 }
 
-/* تعليق: زر النيون الرئيسي باللون الأحمر القرمزي المتفجر */
+/* زر النيون الرئيسي باللون الأحمر القرمزي */
 .btn-amber {
     background: #B51A2B;
     color: #ffffff;
@@ -137,7 +151,7 @@ header nav ul li a.active {
     transform: translateY(-4px);
 }
 
-/* زر الأوتلاين باللون المشمشي الخوخي المضيء ليعطي تباين مذهل */
+/* زر الأوتلاين باللون المشمشي الخوخي المضيء */
 .btn-outline-crimson {
     background: transparent;
     color: #FFA586;
@@ -157,7 +171,7 @@ header nav ul li a.active {
     transform: translateY(-4px);
 }
 
-/* تأثير الغيمة الضوئية الفاخرة المشمشية المتوهجة بمركز الخلفية */
+/* تأثير الغيمة الضوئية الفاخرة المشمشية المتوهجة في الخلفية */
 .luxury-glow {
     position: absolute;
     top: 50%;
@@ -173,12 +187,11 @@ header nav ul li a.active {
 }
 
 /* ------------------------------------------------------------- */
-/* 4. قسم استعراض زجاجة العطر الفاخرة المدمج بالكامل (Integrated Showcase) */
+/* 4. قسم استعراض زجاجة العطر المدمج التفاعلي (Integrated Showcase) */
 /* ------------------------------------------------------------- */
 .collection-section {
-    padding: 60px 8% 120px 8%;
+    padding: 80px 8% 120px 8%;
     position: relative;
-    /* تعليق: جعل خلفية القسم شفافة ليلتحم كلياً ويمتص نفس لون الـ body الموحد */
     background-color: transparent;
 }
 
@@ -205,24 +218,22 @@ header nav ul li a.active {
     align-items: center;
 }
 
-/* كارت المنتج التفاعلي المصمم بخلفية زجاجية بالغة النعومة والانسيابية وبدون أي فواصل */
+/* كارت المنتج التفاعلي المصمم بخلفية زجاجية بالغة التجاوب والانسيابية وبدون أي فواصل */
 .parfum-card {
-  /* تعليق: الكارت التفاعلي المطور - تم حقن التجاوب المطلق لمنع هروب الأزرار جهة الشمال */
-.parfum-card {
-    background: rgba(30, 30, 47, 0.35); 
-    border: none; 
-    padding: 40px 25px; /* تنعيم الحشو الداخلي ليناسب الهواتف الضيقة */
+    background: rgba(255, 255, 255, 0.02);
+    border: none;
+    padding: 50px 30px;
+    /* حشو ناعم لتأمين تمركز العناصر داخل الهاتف */
     border-radius: 24px;
     width: 100%;
-    max-width: 400px;
-    box-sizing: border-box; /* إجبار الكارت على حساب مساحاته بالداخل بدون انفجار */
+    max-width: 420px;
     text-align: center;
     position: relative;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
+    box-sizing: border-box;
+    /* حماية الصندوق من الانفجار الجانبي */
 }
 
 .parfum-badge {
@@ -273,9 +284,10 @@ header nav ul li a.active {
     text-shadow: none;
 }
 
-/* زر المشتريات المطور بالتدرج المشمشي والوردي المتوهج لكسر الألوان الداكنة */
+/* زر المشتريات المطور الملتزم بالتمركز المطلق لمنع الهروب جهة الشمال */
 .btn-buy {
     width: 100%;
+    max-width: 100%;
     background: linear-gradient(135deg, #FFA586, #B51A2B);
     color: #160a10;
     border: none;
@@ -286,34 +298,17 @@ header nav ul li a.active {
     cursor: pointer;
     box-shadow: 0 10px 25px rgba(255, 165, 134, 0.25);
     transition: all 0.3s ease;
+    box-sizing: border-box;
+    /* حماية مطلقة للحسابات الهاتفية */
 }
 
 .parfum-card:hover {
     transform: translateY(-12px);
     background: rgba(255, 255, 255, 0.05);
-    /* زيادة طفيفة في لمعان الزجاج عند التفاعل بمرونة */
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .btn-buy:hover {
     box-shadow: 0 15px 35px #FFA586;
     letter-spacing: 1px;
-}
-
-/* تعليق: إصلاح انحراف زر الهاتف وإجباره على التمركز والانكماش بالسنتر بالملي */
-.btn-buy {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    /* توحيد الحسابات لمنع الهروب جهة الشمال */
-    background: linear-gradient(135deg, #FFA586, #B51A2B);
-    color: #160a10;
-    border: none;
-    padding: 16px;
-    font-size: 16px;
-    font-weight: 900;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(255, 165, 134, 0.25);
-    transition: all 0.3s ease;
 }
